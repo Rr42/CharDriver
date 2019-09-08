@@ -1,9 +1,15 @@
 /* 
+Code author: Ramana R (Rr42)
+Code version: v1.0
+Description:
+    Sample code to demonstrate a linux character driver.
+Good USB device instructions: 
+    https://www.youtube.com/watch?v=_4H-F_5yDvo&list=PLd_Btk6HXPcghu1lMfmkVclZ3YI6zEEp2&index=7
 Note: 
  Kernel space stack is small so DO NOT make too many varibles inside functions 
 it can cause the driver to crash, this is not a problem in user space since user 
 space stacks are huge comparatively. Use global space instead.
- */
+*/
 
 /* Includes */
 #include <linux/module.h>
@@ -144,3 +150,8 @@ static void chardriver_exit(void)
 
 module_init(chardriver_init);
 module_exit(chardriver_exit);
+
+MODULE_LICENSE("MIT License");
+MODULE_AUTHOR("Rr42");
+MODULE_DESCRIPTION("Sample character driver");
+MODULE_VERSION("1.0");
