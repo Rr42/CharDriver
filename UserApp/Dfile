@@ -1,0 +1,11 @@
+
+In terminal:
+  sudo mknod /dev/<myDeviceFileName> <c/b> <Major#> <Minor#>
+<myDeviceFileName> : Device file name
+<c/b> : Character device (c) or Block device (b)
+<Major#> : Major number of driver ckeck "/usr/src/linux/Documentation/ide/ide.txt" for fill list of Major numbers being used to prevent clashes.
+<Minor#> : Minor numner of device handled by driver.
+
+To check out a device file:
+  ls -l /dev/<myDeviceFileName>
+<myDeviceFileName> : Device file name

@@ -1,0 +1,10 @@
+# Things to be excluded
+*.o 
+*.ko 
+*.mod 
+*.symvers 
+*.order 
+.*.cmd 
+*.mod.c 
+.tmp_versions
+.cache.mk
